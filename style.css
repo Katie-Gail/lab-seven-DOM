@@ -1,0 +1,13 @@
+.light-bulb {
+    display: inline;
+    background-color: black;
+    color: blanchedalmond;
+    padding: 5px;
+}
+
+.myOn {
+    display: inline;
+    background-color: grey;
+    color: blanchedalmond;
+    padding: 5px;
+}
