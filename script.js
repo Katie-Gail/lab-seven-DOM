@@ -55,20 +55,21 @@ coinContainer.addEventListener("click",(event)=>{
 //#3
 let lightBulb = document.querySelector(".light-bulb");
 let buttons = document.querySelector(".button-container");
-let button = document.querySelector(".light");
+let bulbButtons = document.querySelectorAll(".light");
 buttons.addEventListener("click", (event) => {
     if(event.target.classList.contains("on")) {
         lightBulb.classList.add("myOn");
     }
     else if (event.target.classList.contains("off")) {
-        lightBulb.style.backgroundColor = "black";
+        lightBulb.classList.remove("myOn");
     }
     else if(event.target.classList.contains("toggle")){
         lightBulb.classList.toggle("myOn");
     }
-    else if(event.target.classList.contains("end")) {
-        button.addEventListener("click",() =>{
-            button.disabled = true;
-        })
+    else if(event.target.classList.contains("end")){
+    lightBulb.remove();
+    bulbButtons.forEach((button) => {
+        button.disabled =true;
+    })
     }
 })
